@@ -64,7 +64,7 @@ extension URLImage {
         // MARK: State
 
         /// State of the `ImageLoader`
-        enum State : Hashable {
+        enum LoadingState : Hashable {
 
             /// Initial state after the object was created
             case initial
@@ -90,7 +90,7 @@ extension URLImage {
 
                 Allowing transition from `finished`, `failed`, and  `cancelled` states back to `scheduled` state enables reloading data.
             */
-            private static let transitions: [State: Set<State>] = [
+            private static let transitions: [LoadingState: Set<LoadingState>] = [
                 .initial   : [ .scheduled ],
                 .scheduled  : [ .loading, .cancelled ],
                 .loading   : [ .finished, .failed, .cancelled ],
@@ -101,7 +101,7 @@ extension URLImage {
 
             /** Verifies if transition from `self` to `state` is possible.
             */
-            func canTransition(to state: State) -> Bool {
+            func canTransition(to state: LoadingState) -> Bool {
                 return Self.transitions[self]!.contains(state)
             }
             
@@ -133,7 +133,7 @@ extension URLImage {
 
         let didChange = PassthroughSubject<ImageLoader, Never>()
 
-        private(set) var state: State = .initial {
+        private(set) var state: LoadingState = .initial {
             didSet {
                 assert(Thread.isMainThread)
                 
@@ -221,7 +221,7 @@ extension URLImage {
 
         /** Transitions from current state to the new state if such transition is valid. Executes given closure on successful transition. Transition and closure are executed asynchronously on the main queue.
         */
-        private func transition(to newState: State, closure: (() -> Void)? = nil) {
+        private func transition(to newState: LoadingState, closure: (() -> Void)? = nil) {
             DispatchQueue.main.async {
                 guard self.state.canTransition(to: newState) else {
                     return
