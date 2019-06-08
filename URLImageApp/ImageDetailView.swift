@@ -15,7 +15,7 @@ struct ImageDetailView : View {
 
     var body: some View {
         NavigationView {
-            URLImage(url: url)
+            URLImage(url)
         }
         .navigationBarTitle(Text("\(url)"), displayMode: .inline)
     }

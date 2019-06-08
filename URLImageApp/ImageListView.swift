@@ -18,7 +18,7 @@ struct ImageListView : View {
             List(urls.identified(by: \.self)) { url in
                 NavigationButton(destination: ImageDetailView(url: url)) {
                     HStack {
-                        URLImage(url: url)
+                        URLImage(url)
                             .frame(minWidth: 100.0, maxWidth: 100.0, minHeight: 100.0, maxHeight: 100.0)
                             .clipped()
                         Text("\(url)")

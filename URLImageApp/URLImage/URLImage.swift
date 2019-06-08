@@ -19,12 +19,12 @@ struct URLImage : View {
 
     // MARK: Public
 
-    init(url: URL, placeholder: Image = Image(systemName: "photo")) {
+    init(_ url: URL, placeholder: Image = Image(systemName: "photo")) {
         self.placeholder = placeholder
         imageLoader = ImageLoader(url: url)
     }
     
-    init(url: URL, placeholder: Image = Image(systemName: "photo"), session: URLSession) {
+    init(_ url: URL, placeholder: Image = Image(systemName: "photo"), session: URLSession) {
         self.placeholder = placeholder
         imageLoader = ImageLoader(url: url)
     }
