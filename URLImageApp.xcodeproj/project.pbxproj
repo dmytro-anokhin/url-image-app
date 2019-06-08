@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,12 +13,8 @@
 		F46B73EE22AAE536007C0371 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F46B73ED22AAE536007C0371 /* Assets.xcassets */; };
 		F46B73F122AAE536007C0371 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F46B73F022AAE536007C0371 /* Preview Assets.xcassets */; };
 		F46B73F422AAE536007C0371 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F46B73F222AAE536007C0371 /* LaunchScreen.storyboard */; };
-		F46B740222AAE56C007C0371 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B73FC22AAE56C007C0371 /* URLImage.swift */; };
-		F46B740322AAE56C007C0371 /* ImageInMemoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B73FE22AAE56C007C0371 /* ImageInMemoryStore.swift */; };
-		F46B740422AAE56C007C0371 /* ImageLocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B73FF22AAE56C007C0371 /* ImageLocalStore.swift */; };
-		F46B740522AAE56C007C0371 /* ImageStoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B740022AAE56C007C0371 /* ImageStoreType.swift */; };
-		F46B740622AAE56C007C0371 /* ImageStoreGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B740122AAE56C007C0371 /* ImageStoreGroup.swift */; };
 		F46B740822AAEAD5007C0371 /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B740722AAEAD5007C0371 /* ImageDetailView.swift */; };
+		F485E35B22AC444700407DB4 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = F485E35A22AC444700407DB4 /* URLImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,11 +26,6 @@
 		F46B73F022AAE536007C0371 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F46B73F322AAE536007C0371 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F46B73F522AAE536007C0371 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F46B73FC22AAE56C007C0371 /* URLImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
-		F46B73FE22AAE56C007C0371 /* ImageInMemoryStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageInMemoryStore.swift; sourceTree = "<group>"; };
-		F46B73FF22AAE56C007C0371 /* ImageLocalStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLocalStore.swift; sourceTree = "<group>"; };
-		F46B740022AAE56C007C0371 /* ImageStoreType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStoreType.swift; sourceTree = "<group>"; };
-		F46B740122AAE56C007C0371 /* ImageStoreGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStoreGroup.swift; sourceTree = "<group>"; };
 		F46B740722AAEAD5007C0371 /* ImageDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F485E35B22AC444700407DB4 /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +46,7 @@
 			children = (
 				F46B73E622AAE536007C0371 /* URLImageApp */,
 				F46B73E522AAE536007C0371 /* Products */,
+				F485E35622AC3F0300407DB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,21 +85,15 @@
 		F46B73FB22AAE56C007C0371 /* URLImage */ = {
 			isa = PBXGroup;
 			children = (
-				F46B73FD22AAE56C007C0371 /* ImageStore */,
-				F46B73FC22AAE56C007C0371 /* URLImage.swift */,
 			);
 			path = URLImage;
 			sourceTree = "<group>";
 		};
-		F46B73FD22AAE56C007C0371 /* ImageStore */ = {
+		F485E35622AC3F0300407DB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F46B73FE22AAE56C007C0371 /* ImageInMemoryStore.swift */,
-				F46B73FF22AAE56C007C0371 /* ImageLocalStore.swift */,
-				F46B740022AAE56C007C0371 /* ImageStoreType.swift */,
-				F46B740122AAE56C007C0371 /* ImageStoreGroup.swift */,
 			);
-			path = ImageStore;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +112,9 @@
 			dependencies = (
 			);
 			name = URLImageApp;
+			packageProductDependencies = (
+				F485E35A22AC444700407DB4 /* URLImage */,
+			);
 			productName = URLImageApp;
 			productReference = F46B73E422AAE536007C0371 /* URLImageApp.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +143,9 @@
 				Base,
 			);
 			mainGroup = F46B73DB22AAE536007C0371;
+			packageReferences = (
+				F485E35922AC444700407DB4 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = F46B73E522AAE536007C0371 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -182,12 +175,7 @@
 			files = (
 				F46B73E822AAE536007C0371 /* AppDelegate.swift in Sources */,
 				F46B73EA22AAE536007C0371 /* SceneDelegate.swift in Sources */,
-				F46B740322AAE56C007C0371 /* ImageInMemoryStore.swift in Sources */,
-				F46B740422AAE56C007C0371 /* ImageLocalStore.swift in Sources */,
 				F46B73EC22AAE536007C0371 /* ImageListView.swift in Sources */,
-				F46B740622AAE56C007C0371 /* ImageStoreGroup.swift in Sources */,
-				F46B740222AAE56C007C0371 /* URLImage.swift in Sources */,
-				F46B740522AAE56C007C0371 /* ImageStoreType.swift in Sources */,
 				F46B740822AAEAD5007C0371 /* ImageDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,6 +370,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F485E35922AC444700407DB4 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F485E35A22AC444700407DB4 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F485E35922AC444700407DB4 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F46B73DC22AAE536007C0371 /* Project object */;
 }

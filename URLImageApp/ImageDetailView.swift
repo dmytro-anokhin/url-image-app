@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import URLImage
 
 
 struct ImageDetailView : View {
