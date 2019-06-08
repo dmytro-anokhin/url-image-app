@@ -1,6 +1,6 @@
 # URLImageApp
 
-**URLImageApp** is a demo app that show how use `URLImage`. `URLImage` is a SwiftUI view that displays an image downloaded from provided URL
+**URLImageApp** is a demo app that show how use [URLImage](https://github.com/dmytro-anokhin/url-image) package. `URLImage` is a SwiftUI view that displays an image downloaded from provided URL
 
 `ImageListView` is an example of using `URLImage` with lists inside the `ListView`.
 
