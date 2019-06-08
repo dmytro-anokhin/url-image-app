@@ -6,7 +6,7 @@
 
 `ImageDetailView` shows how to use `URLImage` standalone.
 
-Here is the blog post on how to build it: https://medium.com/@dmytro.anokhin/url-image-view-in-swiftui-f08f85d942d8
+This is also a demo app for my blog post [URL Image view in SwiftUI](https://medium.com/@dmytro.anokhin/url-image-view-in-swiftui-f08f85d942d8).
 
 ## Running URLImageApp
 
