@@ -11,3 +11,7 @@ Here is the blog post on how to build it: https://medium.com/@dmytro.anokhin/url
 ## Running URLImageApp
 
 You need Xcode 11 to run this code. `URLImage` is a package so you must have github account setup. Swift Package Manager should handle everything. Also you need to fill in your Bundle identifier to run the app.
+
+## Images
+
+**URLImageApp** uses images from [Unsplash](https://unsplash.com) via [picsum.photos](https://picsum.photos) API.
