@@ -1,19 +1,13 @@
 # URLImageApp
 
-URLImage is a SwiftUI view that automatically loads an image from provided URL.
+**URLImageApp** is a demo app that show how use `URLImage`. `URLImage` is a SwiftUI view that displays an image downloaded from provided URL
 
-This is also a demo app for my blog post: https://medium.com/@dmytro.anokhin/url-image-view-in-swiftui-f08f85d942d8
+`ImageListView` is an example of using `URLImage` with lists inside the `ListView`.
 
-You need Xcode 11 to run this code. Also you need to fill your Bundle identifier. 
+`ImageDetailView` shows how to use `URLImage` standalone.
 
-## Importing and using in your app
+Here is the blog post on how to build it: https://medium.com/@dmytro.anokhin/url-image-view-in-swiftui-f08f85d942d8
 
-I will soon make this a package. For now to use it your app include contents of URLImage folder in your project.
+## Running URLImageApp
 
-Creating `URLImage` is simple:
-
-```
-URLImage(url)
-```
-
-See `ImageListView` for example how to use it in lists.
+You need Xcode 11 to run this code. `URLImage` is a package so you must have github account setup. Swift Package Manager should handle everything. Also you need to fill in your Bundle identifier to run the app.
