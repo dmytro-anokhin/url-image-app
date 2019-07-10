@@ -61,7 +61,6 @@
 		F46B73E622AAE536007C0371 /* URLImageApp */ = {
 			isa = PBXGroup;
 			children = (
-				F46B73FB22AAE56C007C0371 /* URLImage */,
 				F46B73E722AAE536007C0371 /* AppDelegate.swift */,
 				F46B73E922AAE536007C0371 /* SceneDelegate.swift */,
 				F46B73EB22AAE536007C0371 /* ImageListView.swift */,
@@ -80,13 +79,6 @@
 				F46B73F022AAE536007C0371 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		F46B73FB22AAE56C007C0371 /* URLImage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = URLImage;
 			sourceTree = "<group>";
 		};
 		F485E35622AC3F0300407DB4 /* Frameworks */ = {

@@ -15,10 +15,11 @@ struct ImageDetailView : View {
     let url: URL
 
     var body: some View {
-        NavigationView {
-            URLImage(url)
-        }
-        .navigationBarTitle(Text("\(url)"), displayMode: .inline)
+        URLImage(url)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .padding(.all, 0)
+            .navigationBarTitle(Text("\(url)"), displayMode: .inline)
     }
 }
 
