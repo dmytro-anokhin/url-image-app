@@ -15,7 +15,12 @@ struct ImageDetailView : View {
     let url: URL
 
     var body: some View {
-        URLImage(url)
+        URLImage(url,
+            placeholder: {
+                Image(systemName: "circle")
+                    .resizable()
+                    .frame(width: 150.0, height: 150.0)
+            })
             .resizable()
             .aspectRatio(contentMode: .fit)
             .padding(.all, 0)
