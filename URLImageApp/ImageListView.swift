@@ -16,7 +16,7 @@ struct ImageListView : View {
 
     var body: some View {
         NavigationView {
-            List(urls.identified(by: \.self)) { url in
+            List(urls, id: \.self) { url in
                 NavigationLink(destination: ImageDetailView(url: url)) {
                     HStack {
                         URLImage(url, delay: 0.25)
