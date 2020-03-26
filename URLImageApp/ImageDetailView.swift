@@ -9,30 +9,31 @@
 import SwiftUI
 import URLImage
 
-
-struct ImageDetailView : View {
-
+struct ImageDetailView: View {
     let url: URL
 
     var body: some View {
         URLImage(url,
-            placeholder: {
-                Image(systemName: "circle")
-                    .resizable()
-                    .frame(width: 150.0, height: 150.0)
-            })
-            .resizable()
-            .aspectRatio(contentMode: .fit)
+                 placeholder: { _ in
+                     Image(systemName: "circle")
+                         .resizable()
+                         .frame(width: 150.0, height: 150.0)
+                 }, content: { proxy in
+                     proxy
+                         .image
+                         .resizable()
+                         .aspectRatio(contentMode: .fit)
+        })
+
             .padding(.all, 0)
             .navigationBarTitle(Text("\(url)"), displayMode: .inline)
     }
 }
 
 #if DEBUG
-struct ImageDetailView_Previews : PreviewProvider {
+struct ImageDetailView_Previews: PreviewProvider {
     static var previews: some View {
         ImageListView()
     }
 }
 #endif
-

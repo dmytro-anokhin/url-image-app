@@ -9,9 +9,7 @@
 import SwiftUI
 import URLImage
 
-
-struct ImageListView : View {
-
+struct ImageListView: View {
     let urls = (300..<325).map { "https://picsum.photos/200/\($0)" }.map { URL(string: $0)! }
 
     var body: some View {
@@ -19,9 +17,12 @@ struct ImageListView : View {
             List(urls, id: \.self) { url in
                 NavigationLink(destination: ImageDetailView(url: url)) {
                     HStack {
-                        URLImage(url, delay: 0.25)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
+                        URLImage(url, delay: 0.25, content: { proxy in
+                            proxy
+                                .image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                        })
                             .frame(width: 100.0, height: 100.0)
                             .clipped()
                         Text("\(url)")
@@ -34,7 +35,7 @@ struct ImageListView : View {
 }
 
 #if DEBUG
-struct ImageListView_Previews : PreviewProvider {
+struct ImageListView_Previews: PreviewProvider {
     static var previews: some View {
         ImageListView()
     }
